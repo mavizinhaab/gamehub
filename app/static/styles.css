@@ -166,3 +166,8 @@ h1 emojified {
     padding: 8px 18px;
   }
 }
+
+button, a {
+  cursor: crosshair;
+}
+
