@@ -1,7 +1,7 @@
 # 🎮 GameHub Mavizera 😎
 
-Aplicação web feita com **Flask** e **SQLite** para gerenciar categorias e jogos.  
-Segue o padrão **MVC** com **Repositories** para acesso ao banco de dados e **Services** para regras de negócio.
+Aplicação web desenvolvida em **Flask** com banco de dados **SQLite**, destinada à gestão de categorias e jogos.  
+O projeto segue o padrão arquitetural **MVC** (Model-View-Controller), utilizando **Repositories** para acesso aos dados e **Services** para encapsular as regras de negócio.
 
 ---
 
