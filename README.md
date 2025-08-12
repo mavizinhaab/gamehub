@@ -8,10 +8,10 @@ O projeto segue o padrão arquitetural **MVC** (Model-View-Controller), utilizan
 ##  Entidades
 
 ### Categoria
-- **id** (int) — Identificador único.
-- **nome** (str) — Nome da categoria (ex.: Ação, RPG, Esporte).
-- **descricao** (str) — Descrição da categoria.
-- **plataforma** (str) — Plataforma associada (ex.: PC, PS5, Xbox).
+- **id** (int) — Identificador único da categoria.
+- **nome** (str) — Nome da categoria (ex.: Ação, RPG, Esportes).
+- **descricao** (str) — Descrição detalhada da categoria.
+- **plataforma** (str) — Plataforma associada à categoria (ex.: PC, PS5, Xbox).
 
 ### Jogo
 - **id** (int) — Identificador único.
