@@ -159,43 +159,11 @@ button:hover, input[type="submit"]:hover {
 }
 
 
-form a {
-  margin-left: 15px;
-  font-weight: 600;
-  color: #eee;
-  text-decoration: underline;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-form a:hover {
-  color: #ff6a00;
-}
-
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-
-h1 emojified {
-  font-size: 1.2em;
-  margin-left: 8px;
-}
-
-
-@media (max-width: 600px) {
-  table, form {
-    font-size: 0.9em;
-  }
-
-  button, input[type="submit"] {
-    padding: 8px 18px;
-  }
-}
-
 button, a {
   cursor: crosshair;
 }
-
