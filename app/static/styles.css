@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,55 +5,49 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 body {
   background-color: #121212; 
   color: #ffffff;
   padding: 20px;
 }
 
-
 h1, h2, h3 {
-  color: #ff6a00; 
+  color: #800020; 
   margin-bottom: 20px;
-  text-shadow: 0 0 5px #ff6a00;
+  text-shadow: 0 0 5px #800020;
   text-align: center;
 }
 
-
 a {
-  color: #ff6a00;
+  color: #800020;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #ffa040;
+  color: #b03060; 
   text-decoration: underline;
 }
-
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 30px;
-  box-shadow: 0 0 10px rgba(255, 106, 0, 0.842);
+  box-shadow: 0 0 10px rgb(182, 6, 50); 
   background-color: #1e1e1e;
   border-radius: 8px;
   overflow: hidden;
 }
 
-
 thead th {
-  background-color: #ff6a00;
-  color: #121212;
+  background-color: #800020;
+  color: #ffffff;
   padding: 12px 15px;
   text-align: left;
   font-weight: 700;
-  border-bottom: 2px solid #ff6a00;
+  border-bottom: 2px solid #800020;
 }
-
 
 tbody tr {
   border-bottom: 1px solid #333;
@@ -65,30 +58,27 @@ tbody tr:hover {
   background-color: #333333;
 }
 
-
 td, th {
   padding: 12px 15px;
 }
 
-
 .actions a {
-  color: #ff6a00;
+  color: #800020;
   font-weight: 600;
   margin-right: 10px;
   transition: color 0.3s ease;
 }
 
 .actions a:hover {
-  color: #ffa040;
+  color: #b03060;
   text-decoration: underline;
 }
-
 
 form {
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(255, 106, 0, 0.4);
+  box-shadow: 0 0 15px rgba(128, 0, 32, 0.4);
   max-width: 400px;
   margin-bottom: 30px;
 }
@@ -97,7 +87,7 @@ label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #ff6a00;
+  color: #800020;
 }
 
 input[type="text"],
@@ -109,22 +99,59 @@ textarea {
   margin-bottom: 15px;
   background-color: #121212;
   color: #eee;
-  box-shadow: inset 0 0 5px #ff6a00;
+  box-shadow: inset 0 0 5px #800020;
   font-size: 1em;
   resize: vertical;
 }
 
-
 button, input[type="submit"] {
-  background-color: #ff6a00;
+  background-color: #800020;
   border: none;
   padding: 10px 25px;
   color: #121212;
   font-weight: 700;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: crosshair;
   transition: background-color 0.3s ease;
 }
+
+button:hover, input[type="submit"]:hover {
+  background-color: #b03060;
+}
+
+form a {
+  margin-left: 15px;
+  font-weight: 600;
+  color: #eee;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+form a:hover {
+  color: #800020;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 emojified {
+  font-size: 1.2em;
+  margin-left: 8px;
+}
+
+@media (max-width: 600px) {
+  table, form {
+    font-size: 0.9em;
+  }
+
+  button, input[type="submit"] {
+    padding: 8px 18px;
+  }
+}
+
 
 button:hover, input[type="submit"]:hover {
   background-color: #ffa040;
