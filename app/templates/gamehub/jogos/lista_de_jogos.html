@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Jogos{% endblock %}
+
+{% block content %}
+<h1>Jogos</h1>
+
+<a href="{{ url_for('criar_jogo') }}">+ Novo Jogo</a>
+<br><br>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Desenvolvedor</th>
+            <th>Categoria</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for jogo in jogos %}
+        <tr>
+            <td>{{ jogo.get_nome() }}</td>
+            <td>{{ jogo.get_desenvolvedor() }}</td>
+            <td>{{ jogo.categoria_nome  }}</td>
+            <td>R$ {{ "%.2f"|format(jogo.get_preco()) }}</td>
+            <td>
+                <a href="{{ url_for('editar_jogo', id=jogo.get_id()) }}">Editar</a> |
+                <a href="{{ url_for('excluir_jogo', id=jogo.get_id()) }}"
+                   onclick="return confirm('Tem certeza que deseja excluir este jogo?');">
+                   Excluir
+                </a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="6">Nenhum jogo cadastrado.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>
+    <a href="{{ url_for('listar_categorias') }}">Ver Categorias</a>
+</p>
+{% endblock %}

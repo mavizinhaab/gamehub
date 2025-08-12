@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Categorias{% endblock %}
+
+{% block content %}
+<h1>Categorias</h1>
+
+<a href="{{ url_for('criar_categoria') }}">+ Nova Categoria</a>
+<br><br>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Plataforma</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cat in categorias %}
+        <tr>
+            <td>{{ cat.get_id() }}</td>
+            <td>{{ cat.get_nome() }}</td>
+            <td>{{ cat.get_descricao() }}</td>
+            <td>{{ cat.get_plataforma() or '-' }}</td>
+            <td>
+                <a href="{{ url_for('editar_categoria', id=cat.get_id()) }}">Editar</a> |
+                <a href="{{ url_for('excluir_categoria', id=cat.get_id()) }}"
+                   onclick="return confirm('Tem certeza que deseja excluir esta categoria?');">
+                   Excluir
+                </a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="5">Nenhuma categoria cadastrada.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p>
+    <a href="{{ url_for('listar_jogos') }}">Ver jogos disponíveis</a>
+</p>
+
+{% endblock %}
