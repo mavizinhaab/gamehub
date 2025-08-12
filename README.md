@@ -1,4 +1,4 @@
-# 🎮 GameHub Mavizera 😎
+# 🎮 GameHub 
 
 Aplicação web desenvolvida em **Flask** com banco de dados **SQLite**, destinada à gestão de categorias e jogos.  
 O projeto segue o padrão arquitetural **MVC** (Model-View-Controller), utilizando **Repositories** para acesso aos dados e **Services** para encapsular as regras de negócio.
@@ -14,17 +14,18 @@ O projeto segue o padrão arquitetural **MVC** (Model-View-Controller), utilizan
 - **plataforma** (str) — Plataforma associada à categoria (ex.: PC, PS5, Xbox).
 
 ### Jogo
-- **id** (int) — Identificador único.
+- **id** (int) — Identificador único do jogo.
 - **nome** (str) — Nome do jogo.
-- **preco** (float) — Preço do jogo.
-- **desenvolvedor** (str) — Nome do desenvolvedor ou estúdio.
-- **categoria_id** (int) — ID da categoria à qual o jogo pertence.
+- **preco** (float) — Valor comercial do jogo.
+- **desenvolvedor** (str) — Nome do desenvolvedor ou estúdio responsável.
+- **categoria_id** (int) — Referência à categoria à qual o jogo está vinculado.
 
 ---
 
-##  Relacionamento
-- **1:N** → Uma categoria pode ter vários jogos.
-- Não é permitido excluir uma categoria caso ela tenha jogos registrados.
+## Relacionamento
+
+- Relação **1:N** — Uma categoria pode conter diversos jogos.
+- A exclusão de uma categoria não é permitida caso existam jogos vinculados a ela, garantindo integridade dos dados.
 
 ##  Como Executar o Projeto
 
