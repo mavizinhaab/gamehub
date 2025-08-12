@@ -29,20 +29,28 @@ O projeto segue o padrão arquitetural **MVC** (Model-View-Controller), utilizan
 
 ##  Como Executar o Projeto
 
-1. Crie o ambiente virtual
+1. **Criar o ambiente virtual**  
     ```bash
     python -m venv venv
     ```
-2. Ative o ambiente virtual
-    ```bash
-    venv\Scripts\activate
-    ```
-3. Instale as dependências
+
+2. **Ativar o ambiente virtual**  
+    - No Windows:  
+      ```bash
+      venv\Scripts\activate
+      ```  
+    - No Linux/macOS:  
+      ```bash
+      source venv/bin/activate
+      ```
+
+3. **Instalar as dependências**  
     ```bash
     pip install --upgrade pip
     pip install Flask
     ```
-4. Execute o servidor
+
+4. **Executar o servidor**  
     ```bash
     python run.py
     ```
